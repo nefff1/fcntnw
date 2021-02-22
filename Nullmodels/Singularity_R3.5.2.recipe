@@ -1,0 +1,30 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%help 
+  This is a ubuntu build with R version 3.5.2 including the tidyverse, rstan and bipartite packages, which is used for null model analysis
+
+%labels
+  CREATOR Felix Neff
+
+%files
+
+
+%post
+  export DEBIAN_FRONTEND=noninteractive
+  apt-get update 
+  apt-get install -y gnupg2 build-essential gfortran software-properties-common libxml2-dev libcurl4-openssl-dev libssl-dev ssh
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+  add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+  apt update
+  # following lines only necessary when there is not enough RAM (to install rstan)
+  # fallocate -l 2G /swapfile
+  # chmod 600 /swapfile
+  # mkswap /swapfile
+  # swapon /swapfile
+  apt-get install -y r-base-core=3.5.2-1bionic
+  apt-get install -y r-base-dev=3.5.2-1bionic
+  Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
+  Rscript -e 'install.packages("rstan", repos="https://cran.rstudio.com")'
+  Rscript -e 'install.packages("codetools", repos="https://cran.rstudio.com")'
+  Rscript -e 'install.packages("bipartite", repos="https://cran.rstudio.com")'

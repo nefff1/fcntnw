@@ -1,0 +1,3 @@
+This repository contains code that was used in the analyses for the article titled **Changes in plant–herbivore network structure and robustness along land-use intensity gradients in grasslands and forests**.
+
+The main part of the analyses is contained in the file **Main_Analysis.R**. Structural equation modelling code is in a separate file (**SEMs.R**). Null models and corresponding statistics were run on an external cluster. Corresponding code is gathered in the folder **Nullmodels**. Code for running the hierarchical models in *Stan* is gathered in the folder **Stan_models**. 
