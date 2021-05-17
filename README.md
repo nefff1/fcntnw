@@ -1,3 +1,5 @@
-This repository contains code that was used in the analyses for the article titled **Changes in plant–herbivore network structure and robustness along land-use intensity gradients in grasslands and forests**.
+This repository contains code that was used in the analyses for the following article:  
 
-The main part of the analyses is contained in the file **Main_Analysis.R**. Structural equation modelling code is in a separate file (**SEMs.R**). Null models and corresponding statistics were run on an external cluster. Corresponding code is gathered in the folder **Nullmodels**. Code for running the hierarchical models in *Stan* is gathered in the folder **Stan_models**. 
+Neff F, Brändle M, Ambarlı D, Ammer C, Bauhus J, Boch S, Hölzel N, Klaus VH, Kleinebecker T, Prati D, Schall P, Schäfer D, Schulze ED, Seibold S, Simons NK, Weisser WW, Pellissier L, Gossner MM (2021). **Changes in plant–herbivore network structure and robustness along land-use intensity gradients in grasslands and forests**. *Science Advances* 7 (20), eabf3985. DOI: [10.1126/sciadv.abf3985](https://doi.org/10.1126/sciadv.abf3985)
+
+The main part of the analyses is contained in the file **Main_Analysis.R**. Structural equation modelling code is in a separate file (**SEMs.R**). Null models and corresponding statistics were run on an external cluster. Corresponding code is gathered in the folder **Nullmodels**. Code for running the hierarchical models in *Stan* is gathered in the folder **Stan_models**.
